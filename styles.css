@@ -1,0 +1,147 @@
+/* Estilo do corpo e alinhamento do conteúdo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+}
+
+/* Configurações da cena 3D */
+.scene {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+/* Estilos gerais do cubo */
+.cube {
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+/* Configurações das faces do cubo */
+.cube .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #3498db;
+    border: 2px solid #fff;
+}
+
+/* Estilos dos ícones nas faces */
+.cube .face i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos específicos de cada face */
+.cube .face.front i {
+    color: #e34c26; /* Cor do ícone HTML */
+}
+
+.cube .face.back i {
+    color: #2965f1; /* Cor do ícone CSS */
+}
+
+.cube .face.left i {
+    color: #f7df1e; /* Cor do ícone JavaScript */
+}
+
+.cube .face.right i {
+    color: #61dafb; /* Cor do ícone React */
+}
+
+.cube .face.top i {
+    color: #8cc84b; /* Cor do ícone Node.js */
+}
+
+.cube .face.bottom i {
+    color: #333; /* Cor do ícone GitHub */
+}
+
+/* Transformações para cada face do cubo */
+.front  { transform: rotateY(  0deg) translateZ(100px); }
+.back   { transform: rotateY(180deg) translateZ(100px); }
+.right  { transform: rotateY( 90deg) translateZ(100px); }
+.left   { transform: rotateY(-90deg) translateZ(100px); }
+.top    { transform: rotateX( 90deg) translateZ(100px); }
+.bottom { transform: rotateX(-90deg) translateZ(100px); }
+
+/* Mensagem que aparece ao pausar a rotação do cubo */
+.message {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 50px;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para tablets e telas menores que 768px */
+@media (max-width: 768px) {
+    .cube {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        margin-left: 50px;
+    }
+
+    .cube .face {
+        font-size: 1.2rem;
+    }
+
+    .cube .face i {
+        font-size: 2.5rem;
+    }
+    .message {
+        margin-top: -580px;
+        margin-left: -150px;
+        font-size: 30px;
+        text-align: flex;
+        transition: opacity 0.5s ease;
+    }
+}
+
+/* Para smartphones e telas menores que 480px */
+@media (max-width: 480px) {
+    .cube {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        margin-left: 80px;
+    }
+    }
+
+    .cube .face {
+        font-size: 1rem;
+    }
+
+    .cube .face i {
+        font-size: 2rem;
+    }
+    
+    .message {
+        margin-top: -580px;
+        margin-left: -170px;
+        font-size: 20px;
+        text-align: flex;
+        transition: opacity 0.5s ease;
+    }
+
+
